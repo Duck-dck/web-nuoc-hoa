@@ -33,7 +33,9 @@ app.post('/api/customer/signup/test', (req, res) => {
     res.json({ message: "Server nhận tốt sếp ơi!" });
 });
 // 5.1. Chỉ phục vụ trang Khách hàng
-app.use('/', express.static(path.resolve(__dirname, 'clients-customer/build')));
+app.use('/api/customer', customerApi); 
+
+// PHẢI ĐẶT DƯỚI CÙNG (Ngay trước app.listen)
 app.get(/.*/, (req, res) => {
   res.sendFile(path.resolve(__dirname, 'clients-customer/build', 'index.html'));
 });
