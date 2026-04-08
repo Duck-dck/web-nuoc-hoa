@@ -47,4 +47,4 @@ const Customer = mongoose.models.Customer || mongoose.model('Customer', Customer
 const Admin = mongoose.models.Admin || mongoose.model('Admin', AdminSchema);
 const Order = mongoose.models.Order || mongoose.model('Order', OrderSchema, 'orders');
 
-module.exports = {Products, Customer, Admin, Order };
+module.exports = {Product, Customer, Admin, Order };
