@@ -1,5 +1,5 @@
 const express = require('express');
-const Product = require('../models/Models');
+const {Product} = require('../models/Models');
 const router = express.Router();
 const {CustomerDAO, OrderDAO} = require('../models/CustomerDAO');
 const CryptoUtil = require('../utils/CryptoUtil');
