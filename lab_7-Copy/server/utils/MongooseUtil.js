@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Thay đổi chuỗi kết nối nếu bạn dùng MongoDB Atlas hoặc tên DB khác
-const uri = 'mongodb://localhost:27017/shopping'; 
+const uri = 'mongodb+srv://admin:Thinh2005@cluster0.sr4aluo.mongodb.net/shopping?appName=Cluster0'; 
 
 mongoose.connect(uri)
   .then(() => {
