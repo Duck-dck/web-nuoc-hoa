@@ -15,7 +15,7 @@ class Home extends Component{
       
     componentDidMount() {
         // Gọi API lấy danh sách sản phẩm từ Backend cổng 3000
-        axios.get('https://web-nuoc-hoa.onrender.com/api/products')
+        axios.get('https://web-nuoc-hoa.onrender.com/api/customer/products')
           .then(res => {
             this.setState({ products: res.data });
           })
