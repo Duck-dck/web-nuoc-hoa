@@ -1,0 +1,162 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #5ce1e6;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.text > h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    color: fuchsia;
+
+    padding: 20px;
+}
+.text > .p1 {
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    
+}
+.text > .p2 {
+    width: auto;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 16px;
+}
+.text > .p2 a{
+    text-decoration: none;
+    color: red;
+}
+.text > .p2 a:hover {
+    color: fuchsia;
+}
+footer {
+    background-color: #5ce1e6;
+    margin-top: 10px;
+    color: white;
+}
+footer > .foottop,
+footer > .footmid {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+footer > .foottop h5,
+footer > .footmid h5 {
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 20px 0;
+}
+footer > .foottop a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+footer > .foottop a:hover {
+    color: fuchsia;
+}
+footer > .foottop p {
+    margin: 10px 0;
+} 
+footer > .footmid > .col1 {
+    width: 20%;
+}
+footer > .footmid > .col2 {
+    width: 20%;
+}
+footer > .footmid > .col2 a {
+    color: white;
+}
+footer > .footmid > .col3 {
+    width: 40%;
+    padding-right: 100px;
+}
+footer > .footmid > .col3 > form .id {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+footer > .footmid > .col3 input[type=text],
+footer > .footmid > .col3 input[type=email] {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+footer > .footmid > .col3 input[type=submit] {
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: cyan;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+footer > .footmid > .col3 input[type=submit]:hover {
+    background-color: fuchsia;
+}
+footer > .footbottom {
+    width: 100%;
+    height: 50px;
+    background-color: aqua;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    
+}
+footer > .footbottom a {
+    text-decoration: none;
+    color: gray
+}
+footer > .footbottom a:hover {
+    color: fuchsia;
+}
+
+
+/* Từ đây trở xuống là css mới */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+.category-section {
+    margin-bottom: 60px; /* Khoảng cách giữa các nhóm Nam/Nữ/Unisex */
+  }
+  
+.category-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif; /* Font chữ có chân sẽ sang hơn */
+    font-size: 28px;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+.category-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #000;
+    margin: 15px auto 0;
+  }
+

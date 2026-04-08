@@ -1,0 +1,203 @@
+/* Container bao quanh toàn bộ kệ hàng */
+/* ở đây chỉ có sản phẩm và kệ hàng thôi */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Tự động chia cột */
+    gap: 30px; /* Khoảng cách giữa các chai */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Khung cho từng sản phẩm */
+.product-item {
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.product-item:hover {
+    transform: translateY(-10px); /* Bay lên nhẹ khi di chuột vào */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Cố định kích thước ảnh để kệ hàng không bị lệch */
+.product-img {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #f9f9f9;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Giữ nguyên tỉ lệ ảnh nước hoa, không bị méo */
+    transition: transform 0.5s ease;
+}
+
+.product-item:hover .product-img img {
+    transform: scale(1.1); /* Phóng to ảnh nhẹ khi hover */
+}
+
+/* Thông tin tên và giá */
+.product-info h3 {
+    font-size: 16px;
+    margin: 15px 10px 5px;
+    color: #333;
+    height: 40px; /* Cố định chiều cao tên để không bị lệch hàng giá */
+    overflow: hidden;
+}
+
+
+.product-item .price {
+    color: #be1e2d; /* Màu đỏ bạn muốn */
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    display: block;
+  }
+
+/* Nút bấm giả (nếu bạn muốn thêm) */
+.btn-detail {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+/* Container tổng */
+.product-detail-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  /* Wrapper chia 2 cột */
+  .detail-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+  }
+  
+  /* Cột trái: Hình ảnh */
+  .detail-image {
+    flex: 1;
+    border: 1px solid #f1f1f1;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .detail-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+  }
+  
+  .detail-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Cột phải: Thông tin */
+  .detail-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .detail-brand {
+    font-size: 16px;
+    color: #d4a373; /* Màu vàng đồng */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  
+  .detail-name {
+    font-size: 32px;
+    color: #333;
+    margin: 0 0 20px 0;
+    font-family: 'Playfair Display', serif; /* Nếu sếp có dùng font này */
+  }
+  
+  .detail-price {
+    font-size: 28px;
+    color: #b11f1f; /* Đỏ mận sang trọng */
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Mô tả */
+  .detail-description {
+    margin-bottom: 30px;
+  }
+  
+  .detail-description h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .detail-description p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 15px;
+  }
+  
+  /* Nút thêm vào giỏ hàng */
+  .btn-add-cart {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 18px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+  }
+  
+  .btn-add-cart:hover {
+    background-color: #d4a373; /* Đổi sang vàng đồng khi hover */
+    box-shadow: 0 5px 15px rgba(212, 163, 115, 0.4);
+  }
+  
+  /* Loader */
+  .loader {
+    text-align: center;
+    padding: 100px;
+    font-size: 20px;
+    color: #888;
+  }
+  
+  /* Responsive cho mobile */
+  @media (max-width: 768px) {
+    .detail-wrapper {
+      flex-direction: column;
+    }
+    .detail-image img {
+      width: 100%;
+      height: auto;
+    }
+  }

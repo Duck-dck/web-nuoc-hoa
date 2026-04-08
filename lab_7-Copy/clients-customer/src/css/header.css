@@ -1,0 +1,130 @@
+/* Tổng thể Header */
+/* menu, navigate bar,.... */
+nav {
+    width: 90%; /* Tăng độ rộng một chút cho thoáng */
+    max-width: 1200px;
+    margin: 20px auto;
+    border-bottom: 1px solid #eee; /* Đường kẻ mảnh bên dưới cho sang */
+}
+
+/* Danh sách Menu */
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center; /* Căn giữa các mục menu */
+    align-items: center;
+    padding: 0;
+    gap: 10px; /* Khoảng cách giữa các mục thay vì dùng dấu | */
+}
+
+/* Các mục trong Menu */
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px; /* Giảm size xuống 14-16px nhìn sẽ tinh tế hơn 20px */
+    font-weight: 600;
+    text-transform: uppercase; /* Viết hoa toàn bộ cho phong cách thời trang */
+    letter-spacing: 1px;
+    display: block;
+    padding: 10px 15px;
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà khi hover */
+}
+
+/* Hiệu ứng Hover */
+nav ul li:hover a {
+    color: #be1e2d; /* Màu đỏ đô đồng bộ với giá tiền sản phẩm */
+    background-color: transparent; /* Bỏ màu nền xanh để nhìn sang hơn */
+}
+
+/* Tùy chỉnh riêng cho phần Giỏ hàng (Cart) */
+nav ul li b {
+    background-color: #be1e2d;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Loại bỏ dấu gạch đứng nếu bạn lỡ viết trong HTML */
+nav span {
+    display: none; /* Ẩn các dấu gạch đứng cũ */
+}
+.app-header {
+    padding: 20px 0;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+.main-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  
+  /* Thanh điều hướng */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Nhóm trên: Nhỏ, màu xám nhẹ */
+.nav-top {
+    gap: 15px;
+    margin-bottom: 15px !important;
+  }
+  
+.nav-top a {
+    text-decoration: none;
+    color: #777;
+    font-size: 13px;
+    transition: color 0.3s;
+  }
+  
+.nav-top a:hover {
+    color: #be1e2d; /* Màu đỏ của giá tiền */
+  }
+  
+  /* Nhóm menu chính: Đậm, to, sang trọng */
+.nav-menu {
+    gap: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 15px !important;
+  }
+  
+.nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  
+  /* Hiệu ứng Badge cho giỏ hàng */
+.cart-btn {
+    display: flex;
+    align-items: center;
+  }
+  
+.badge {
+    background: #be1e2d;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 11px;
+    margin-left: 5px;
+    font-weight: bold;
+  }
+  
+.divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 0;
+  }

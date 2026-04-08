@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Từ đây trở đi sẽ là cái mới */
+.product-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0;
+    height: 40px; /* Cố định chiều cao để tên dài không làm lệch hàng */
+    overflow: hidden;
+  }
+  
+
+.btn-detail {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+.btn-detail:hover {
+    background: #444;
+  }
+/* .link{
+  cursor: pointer;
+  color: blueviolet;
+  text-decoration-color: aqua;
+} */
