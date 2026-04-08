@@ -32,8 +32,8 @@ app.post('/api/customer/signup/test', (req, res) => {
     console.log("🔥 ĐÃ NHẬN ĐƯỢC REQUEST TEST!");
     res.json({ message: "Server nhận tốt sếp ơi!" });
 });
-// 5.1. Chỉ phục vụ trang Khách hàng
-app.use('/api/customer', customerApi); 
+
+app.use(express.static(path.resolve(__dirname, 'clients-customer/build')));
 
 // PHẢI ĐẶT DƯỚI CÙNG (Ngay trước app.listen)
 app.get(/.*/, (req, res) => {
