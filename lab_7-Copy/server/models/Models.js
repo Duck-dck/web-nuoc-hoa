@@ -39,7 +39,7 @@ const ProductSchema = new mongoose.Schema({
   image: {type: String},
   brand:{type: String},
   category: { type: String } // Liên kết với Category
-}, { collection: 'products' });
+}, { collection: 'product' });
 
 // Xuất model để các file khác (như CustomerDAO) có thể dùng
 const Product = mongoose.models.Product || mongoose.model('Product', ProductSchema);
