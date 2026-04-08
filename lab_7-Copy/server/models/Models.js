@@ -42,7 +42,7 @@ const ProductSchema = new mongoose.Schema({
 }, { collection: 'products' });
 
 // Xuất model để các file khác (như CustomerDAO) có thể dùng
-const Products = mongoose.models.Product || mongoose.model('Product', ProductSchema);
+const Product = mongoose.models.Product || mongoose.model('Product', ProductSchema);
 const Customer = mongoose.models.Customer || mongoose.model('Customer', CustomerSchema);
 const Admin = mongoose.models.Admin || mongoose.model('Admin', AdminSchema);
 const Order = mongoose.models.Order || mongoose.model('Order', OrderSchema, 'orders');
