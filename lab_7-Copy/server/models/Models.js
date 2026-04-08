@@ -34,17 +34,17 @@ const AdminSchema = new mongoose.Schema({
 
 //định nghĩa cấu trúc cho sản phẩm (product)
 const ProductSchema = new mongoose.Schema({
-  name: {type: String, require: true},
-  price: {type: Number, require: true},
+  name: {type: String, required: true},
+  price: {type: Number, required: true},
   image: {type: String},
   brand:{type: String},
   category: { type: String } // Liên kết với Category
-}, { collection: 'product' });
+}, { collection: 'products' });
 
 // Xuất model để các file khác (như CustomerDAO) có thể dùng
-const Product = mongoose.models.Product || mongoose.model('Product', ProductSchema);
+const Products = mongoose.models.Product || mongoose.model('Products', ProductSchema);
 const Customer = mongoose.models.Customer || mongoose.model('Customer', CustomerSchema);
 const Admin = mongoose.models.Admin || mongoose.model('Admin', AdminSchema);
 const Order = mongoose.models.Order || mongoose.model('Order', OrderSchema, 'orders');
 
-module.exports = {Product, Customer, Admin, Order };
+module.exports = {Products, Customer, Admin, Order };
