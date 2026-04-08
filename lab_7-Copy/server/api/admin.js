@@ -109,8 +109,8 @@ const verifyAdmin = (req, res, next) => {
 };
 
 // Áp dụng ổ khóa này vào các Route quan trọng
-router.post('/products', verifyAdmin, async (req, res) => { /* Code thêm */ });
-router.delete('/products/:id', verifyAdmin, async (req, res) => { /* Code xóa */ });
+// router.post('/products', verifyAdmin, async (req, res) => { /* Code thêm */ });
+// router.delete('/products/:id', verifyAdmin, async (req, res) => { /* Code xóa */ });
 //=======================================
 
 
