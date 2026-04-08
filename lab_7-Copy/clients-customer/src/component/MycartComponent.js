@@ -105,12 +105,13 @@ class Mycart extends Component {
     console.log("🔍 Kiểm tra giỏ hàng trước khi gửi:", items);
     const body = {total:total,items:items,customer: customer};
     const config = {headers: {'x-access-token': this.context.token}};
-    axios.post ('https://web-nuoc-hoa.onrender.com/api/customer/checkout',body,config).then((res) => {
+    axios.post ('/api/customer/checkout',body,config).then((res) => {
+    console.log("🔥 Kết quả từ Server trả về:", res.data);
     const result = res.data ;
     if (result) {
         alert('OK BABY !!!');
         this.context.setMycart([]);
-        // window.location.href = '/home';
+        window.location.href = '/home';
     } else{
         alert('SORRY BABY!');
     }
