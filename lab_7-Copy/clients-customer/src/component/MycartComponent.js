@@ -105,7 +105,7 @@ class Mycart extends Component {
     console.log("🔍 Kiểm tra giỏ hàng trước khi gửi:", items);
     const body = {total:total,items:items,customer: customer};
     const config = {headers: {'x-access-token': this.context.token}};
-    axios.post ('http://localhost:3000/api/customer/checkout',body,config).then((res) => {
+    axios.post ('https://web-nuoc-hoa.onrender.com/api/customer/checkout',body,config).then((res) => {
     const result = res.data ;
     if (result) {
         alert('OK BABY !!!');
