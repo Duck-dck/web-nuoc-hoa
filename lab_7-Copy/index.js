@@ -34,7 +34,7 @@ app.post('/api/customer/signup/test', (req, res) => {
 });
 // 5.1. Chỉ phục vụ trang Khách hàng
 app.use('/', express.static(path.resolve(__dirname, 'clients-customer/build')));
-app.get('/:any(.*)', (req, res) => {
+app.get('/:path*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'clients-customer/build', 'index.html'));
 });
 
