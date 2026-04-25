@@ -73,7 +73,7 @@ btnDeleteClick = (id) => {
           <td>{item.price}</td>
           <td>{item.brand}</td>
           <td>{item.category}</td>
-          <td><img src={'/'+item.image} width="50" alt="" /></td>
+          <td><img src={'/image/'+item.image} width="50" alt="" /></td>
           <td>
             <button 
                 style={{ color: 'red', cursor: 'pointer' }}
