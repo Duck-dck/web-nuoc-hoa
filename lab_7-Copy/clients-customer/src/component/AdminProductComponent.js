@@ -43,7 +43,8 @@ class AdminProduct extends Component {
           });
           this.apiGetProducts(); // Load lại danh sách
         } else {
-          alert('Thất bại: ' + (res.data.message || 'Lỗi server'));
+          const errorMsg = (res.data && res.data.message) ? res.data.message : 'Lỗi không xác định từ server';
+          alert('Thất bại: ' + errorMsg);
         }
       })
       .catch((err) => {
